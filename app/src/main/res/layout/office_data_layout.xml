@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="#ffffff"
+        >
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ss"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/ed"
+            />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="60dp"
+            android:layout_margin="6dp"
+            android:layout_toRightOf="@id/ed"
+            android:background="@drawable/shapebtn"
+            android:layout_height="30dp"
+            android:text="搜索"/>
+
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/office_smart"
+        >
+        <com.scwang.smartrefresh.header.WaveSwipeHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/office_rec"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
